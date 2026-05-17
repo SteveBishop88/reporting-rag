@@ -50,11 +50,13 @@ When a user submits a query via the input field, the application completes the f
 To run this application locally, you must operate the Python backend and the Next.js frontend simultaneously using two separate terminal windows.
 
 ### Terminal 1: The FastAPI Backend
-1. Navigate to the root directory and activate your virtual environment:
-   cd C:\Users\drumm\AI_Projects\Reporting_RAG
-   .\venv\Scripts\Activate.ps1
+1. Open a PowerShell window and activate your Conda environment:
+   conda activate rag_env
 
-2. Launch the local Uvicorn ASGI server:
+2. Navigate to the root directory:
+   cd C:\Users\drumm\AI_Projects\Reporting_RAG
+
+3. Launch the local Uvicorn ASGI server:
    uvicorn app:app --reload
 
    The backend API will initialize your local ChromaDB vector store and begin listening for embedding queries at: http://127.0.0.1:8000
