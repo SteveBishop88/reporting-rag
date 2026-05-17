@@ -4,6 +4,8 @@ A localized, high-performance Retrieval-Augmented Generation (RAG) pipeline desi
 
 This architecture leverages LangChain and LangGraph for orchestration, ChromaDB for local vector storage, and Ollama (Llama 3.1) as the local LLM brain, ensuring total data privacy with zero external API dependencies.
 
+This README details running the backend in a command (powershell) window.  It was the first step towards building an UI interface that provides the same functionality wrapped by a web interface.
+
 ## Tech Stack & Architecture
 
 * Orchestration: LangChain & LangGraph

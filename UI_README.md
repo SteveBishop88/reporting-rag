@@ -44,3 +44,27 @@ When a user submits a query via the input field, the application completes the f
 3. Cross-Port Fetch: An asynchronous network fetch request is dispatched to the FastAPI engine running locally on http://127.0.0.1:8000/api/query.
 4. Commit AI Response: The server responds with a JSON package containing the synthesized answer and an array of metadata sources. These are pushed to the Zustand store.
 5. Graceful Teardown: The loading state is flipped back to false and the viewport smoothly auto-scrolls to the fresh text block.
+
+## 🔌 Running the Full-Stack Application
+
+To run this application locally, you must operate the Python backend and the Next.js frontend simultaneously using two separate terminal windows.
+
+### Terminal 1: The FastAPI Backend
+1. Navigate to the root directory and activate your virtual environment:
+   cd C:\Users\drumm\AI_Projects\Reporting_RAG
+   .\venv\Scripts\Activate.ps1
+
+2. Launch the local Uvicorn ASGI server:
+   uvicorn app:app --reload
+
+   The backend API will initialize your local ChromaDB vector store and begin listening for embedding queries at: http://127.0.0.1:8000
+
+### Terminal 2: The Next.js Web Interface
+1. Open a second, independent PowerShell window, navigate to the UI subdirectory, and install the Node packages:
+   cd C:\Users\drumm\AI_Projects\Reporting_RAG\ui
+   npm install
+
+2. Start the local frontend development server:
+   npm run dev
+
+   The light-mode recruiter console will compile and launch in your browser at: http://localhost:3000
