@@ -16,16 +16,16 @@ This architecture leverages LangChain and LangGraph for orchestration, ChromaDB 
 
 1. Prerequisites
 Ensure you have Ollama installed and running locally with the Llama 3.1 model pulled:
-bash ollama run llama3.1
+>>> ollama run llama3.1
 
 2. Setup Environment
 Using Miniconda or Anaconda, activate your environment:
-bash conda activate rag_env
+>>> conda activate rag_env
 
 3. Ingest Documents
 Place your target PDF into the data/ directory and run the ingestion script to chunk, embed, and store the text vectors locally:
-python ingest_pdf.py
+>>> python ingest_pdf.py
 
 4. Query the System
 Run the main loop script to start a conversational RAG session with your local model:
-python rag_final.py
+>>> python rag_final.py
