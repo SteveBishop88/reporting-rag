@@ -20,7 +20,9 @@ Ensure you have Ollama installed and running locally with the Llama 3.1 model pu
 
 2. Setup Environment
 Using Miniconda or Anaconda, activate your environment:
+>>> conda create -n rag_env python=3.11 -y
 >>> conda activate rag_env
+>>> pip install langchain langchain-community langchain-huggingface langchain-chroma langchain-ollama torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 pypdf
 
 3. Ingest Documents
 Place your target PDF into the data/ directory and run the ingestion script to chunk, embed, and store the text vectors locally:
